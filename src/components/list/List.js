@@ -13,7 +13,7 @@ function List(props) {
     const displayList = (settings.showCompleted == "true" ? props.list : props.incomplete).slice(pagesVisited, pagesVisited + listPerPage).map((ele) => {
         return (
             <div key={ele.id} style={{ width: "650px", margin: "15px" }}>
-                <Card interactive={true} elevation={Elevation.TWO} style={{ backgroundColor: "#b7b7b7" }}>
+                <Card interactive={true} elevation={Elevation.TWO} style={{ backgroundColor: "#b7b7b7", borderLeft: `${ele.color} 0.5rem solid`}}>
                   <img src={ele.image} style={{width:"500px"}}/>
                     <p>{ele.toDoText}</p>
                     <p>

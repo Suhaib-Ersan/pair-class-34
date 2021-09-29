@@ -1,8 +1,12 @@
-import React from "react";
-import { Card, Button, FormGroup, InputGroup } from "@blueprintjs/core";
+import React, { useState } from "react";
+import { Card, Button, FormGroup, InputGroup, RadioGroup, Radio } from "@blueprintjs/core";
 import Auth from "../login/auth";
 
 export default function Form(props) {
+    const [color, setColor] = useState("colorless");
+    function handleColorChange(event) {
+        setColor(event.target.value);
+    }
     return (
         <Card className="mainItem" style={{ backgroundColor: "#76c393" }}>
             <h4>Add to do list</h4>
@@ -18,7 +22,16 @@ export default function Form(props) {
                         <label>Difficulty </label>
                         <input defaultValue={1} type="range" min={1} max={10} name="difficulty" />
                     </div>
-                    
+                    <RadioGroup name="colorRadio" label="Color select" onChange={handleColorChange} selectedValue={color} inline>
+                        <Radio label="colorless" value="colorless" />
+                        <Radio label="blue" value="blue" />
+                        <Radio label="lightblue" value="lightblue" />
+                        <Radio label="green" value="green" />
+                        <Radio label="orange" value="orange" />
+                        <Radio label="red" value="red" />
+                        <Radio label="pink" value="pink" />
+                    </RadioGroup>
+
                     <Auth capability="create">
                         <div>
                             <Button className="button" type="submit">

@@ -17,7 +17,7 @@ const ToDo = () => {
 
 
 
-
+        let color = event.target.colorRadio.value;
         let toDoText = event.target.toDoItem.value;
         let assignee = event.target.assignee.value;
         let image = event.target.imageURL.value;
@@ -41,7 +41,8 @@ const ToDo = () => {
             toDoText,
             assignee,
             image,
-            difficulty: event.target.difficulty.value
+            difficulty: event.target.difficulty.value,
+            color
         }
 
         item.id = uuid();

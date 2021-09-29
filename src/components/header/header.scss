@@ -1,0 +1,39 @@
+@import  '../../variables.scss';
+
+.header {
+    background-color: $mainColor_1!important;
+    color: $accentColor_1;
+    .headerLogoGroup {
+        gap: 1rem;
+    }
+    #headerLogo {
+        position: relative;
+        top:3px;
+        user-select: none;
+    }
+    .headerLogoGroup {
+        button > span {
+            color: $accentColor_1;
+        } 
+    }
+    .headerUserGroup {
+       > button > span {
+           color: $accentColor_1;
+       } 
+    }
+    nav ul {
+        float: right;
+        margin-right: 500px;
+    }
+    nav ul li {
+        display: inline-block;
+        line-height: 20px;
+        margin: 30 20px;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    li a {
+        color: rgb(121, 115, 115);
+    }
+}
