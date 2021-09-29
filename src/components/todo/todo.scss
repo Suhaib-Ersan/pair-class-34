@@ -1,0 +1,25 @@
+@import  '../../variables.scss';
+
+.addItemToDoForm {
+  .itemsPendingHeader {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    nav {
+      padding: 1rem 1rem;
+      background-color: $accentColor_2;
+      color: $accentColor_1;
+      h2 {
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+        top: 0.2rem;
+      }
+      :nth-child(2) {
+        opacity: 0.3;
+      }
+    }
+  }
+}

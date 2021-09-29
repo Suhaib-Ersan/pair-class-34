@@ -3,7 +3,10 @@ import ToDo from "./components/todo/Todo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import SettingsForm from "./context/settingForm";
+
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer"
+
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -27,11 +30,9 @@ function App() {
                                 </Auth>
                             </Route>
                             {/* <Auth capability="read"> */}
-                            <Route exact path="/settingsForm">
-                                <SettingsForm />
-                            </Route>
                             {/* </Auth> */}
                         </Switch>
+                        <Footer />
                     </Router>
                 </LoginProvider>
             </SettingsContext>

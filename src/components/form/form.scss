@@ -1,0 +1,104 @@
+@import "../../variables";
+.forAndListContainer {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    height: 75vh;
+
+    .mainItem {
+        position: relative;
+        > form > div > div {
+            .text-input {
+                width: 70%;
+            }
+            > label,
+            .Difficulty,
+            .Difficulty > input,
+            .colorRadio {
+                margin-top: 0.5rem;
+                margin-bottom: 0.2rem;
+            }
+            .Difficulty > input {
+                display: block;
+                width: 35%;
+            }
+        }
+        .formMainStuffContainer > div {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            .addToDoBtn {
+                all: unset;
+
+                position: absolute;
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 16rem;
+                padding: 1rem 3rem;
+                margin-top: auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 0.25rem;
+                border: solid 2px $mainColor_2;
+                box-shadow: 0 1px 3px $accentColor_3;
+
+                font-size: larger;
+                font-weight: 500;
+                color: $mainColor_2;
+
+                cursor: pointer;
+                background-color: $accentColor_1 !important;
+
+                transition: 0.1s;
+                &:hover {
+                    background-color: rgb(255, 244, 252) !important;
+                }
+            }
+        }
+        .colorRadio {
+            label {
+                padding: 0.5rem 1.25rem;
+                padding-left: 2.25rem;
+                background-color: rgba(0, 0, 0, 0.884);
+                color: rgba(255, 255, 255, 0.877);
+
+                border-radius: 200rem;
+
+                font-weight: 500;
+            }
+            .blue {
+                background-color: #1246f3d3;
+                color: rgba(255, 255, 255, 0.877);
+            }
+            .lightblue {
+                background-color: lightblue;
+                color: rgba(17, 17, 17, 0.726);
+            }
+            .green {
+                background-color: rgb(50, 206, 110);
+                color: rgba(2, 2, 2, 0.877);
+            }
+            .orange {
+                background-color: orange;
+                color: rgba(2, 2, 2, 0.877);
+            }
+            .red {
+                background-color: #ff2164;
+                color: rgba(2, 2, 2, 0.877);
+            }
+            .pink {
+                background-color: #ff7694;
+                color: rgba(2, 2, 2, 0.877);
+            }
+            .bp3-control-indicator {
+            }
+        }
+    }
+}

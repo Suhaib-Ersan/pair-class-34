@@ -19,9 +19,6 @@ export default function Header() {
                         <Link to="/">
                             <Button className="bp3-minimal" icon="home" text="Home" />
                         </Link>
-                        <Link to="/settingsForm">
-                            <Button className="bp3-minimal" icon="settings" text="Settings" />
-                        </Link>
                     </Navbar.Group>
                     <Navbar.Group className="headerUserGroup" align={Alignment.RIGHT}>
                         <span>{loginContext.user.username}</span>

@@ -1,3 +1,15 @@
+@import  './variables.scss';
+
 html, body, #root {
   height: 100%;
+}
+body { 
+  background-color: $mainBgColor;
+ #root {
+ }
+}
+
+::selection {
+  color: white;
+  background-color: $mainColor_3;
 }

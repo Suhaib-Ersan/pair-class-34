@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import { Card, Button, FormGroup, InputGroup, RadioGroup, Radio } from "@blueprintjs/core";
 import Auth from "../login/auth";
 
+import "./form.scss";
+
 export default function Form(props) {
-    const [color, setColor] = useState("colorless");
+    const [color, setColor] = useState("black");
     function handleColorChange(event) {
         setColor(event.target.value);
     }
     return (
-        <Card className="mainItem" style={{ backgroundColor: "#76c393" }}>
+        <Card className="mainItem">
             <h4>Add to do list</h4>
             <form onSubmit={() => props.addItem(event)}>
-                <FormGroup labelFor="text-input" labelInfo="(required)">
+                <FormGroup className="formMainStuffContainer" labelFor="text-input" labelInfo="(required)">
                     <label>To Do item</label>
                     <InputGroup name="toDoItem" className="text-input" placeholder="Item Details" />
                     <label>Assigned To </label>
@@ -22,22 +24,21 @@ export default function Form(props) {
                         <label>Difficulty </label>
                         <input defaultValue={1} type="range" min={1} max={10} name="difficulty" />
                     </div>
-                    <RadioGroup name="colorRadio" label="Color select" onChange={handleColorChange} selectedValue={color} inline>
-                        <Radio label="colorless" value="colorless" />
-                        <Radio label="blue" value="blue" />
-                        <Radio label="lightblue" value="lightblue" />
-                        <Radio label="green" value="green" />
-                        <Radio label="orange" value="orange" />
-                        <Radio label="red" value="red" />
-                        <Radio label="pink" value="pink" />
+                    <RadioGroup className="colorRadio" name="colorRadio" onChange={handleColorChange} selectedValue={color} inline>
+                        <p>Color Select</p>
+                        <Radio className="black" label="black" value="black" />
+                        <Radio className="blue" label="blue" value="blue" />
+                        <Radio className="lightblue" label="lightblue" value="lightblue" />
+                        <Radio className="green" label="green" value="green" />
+                        <Radio className="orange" label="orange" value="orange" />
+                        <Radio className="red" label="red" value="red" />
+                        <Radio className="pink" label="pink" value="pink" />
                     </RadioGroup>
 
                     <Auth capability="create">
-                        <div>
-                            <Button className="button" type="submit">
-                                Add Item
-                            </Button>
-                        </div>
+                        <Button className="addToDoBtn" type="submit">
+                            Add Item
+                        </Button>
                     </Auth>
                 </FormGroup>
             </form>
